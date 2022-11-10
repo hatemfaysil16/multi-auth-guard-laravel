@@ -1,0 +1,198 @@
+.settings-panel hidden {
+	position: fixed;
+	z-index: 1020;
+	top: calc(50% - 200px);
+	left: 0;
+}
+@media (max-width: 1199px) {
+  .settings-panel hidden {
+    top: calc(50% - 140px);
+  }
+}
+.settings-panel hidden > * {
+	position: relative;
+	text-align: center;
+	height: 46px;
+	width: 46px;
+	clear: both;
+}
+.settings-panel hidden > *:nth-child(1) .settings-panel hidden-btn {
+	-webkit-filter: brightness(105%);
+}
+.settings-panel hidden > *:nth-child(2) .settings-panel hidden-btn {
+	-webkit-filter: brightness(95%);
+}
+.settings-panel hidden > *:nth-child(3) .settings-panel hidden-btn {
+	-webkit-filter: brightness(90%);
+}
+.settings-panel hidden > .opened {
+	z-index: 10;
+}
+.settings-panel hidden-buy-now .settings-panel hidden-btn:hover {
+	width: 180px;
+	text-decoration: none !important;
+	transition: width .2s ease .1s;
+}
+.settings-panel hidden-buy-now .settings-panel hidden-btn {
+	text-align: left;
+	padding-left: 7px;
+	font-weight: 500;
+	transition: width .2s ease .0s;
+}
+.settings-panel hidden .settings-panel hidden-btn img {
+	max-width: 100%;
+}
+.settings-panel hidden-buy-now .settings-panel hidden-btn,
+.settings-panel hidden .settings-panel hidden-btn {
+	border-radius: 0 !important;
+	overflow: hidden;
+}
+.toggle-switch-text,
+.settings-panel hidden-colorswatch .title {
+	font-size: 15px;
+	line-height: 1em;
+	font-weight: 600;
+	text-align: left;
+}
+.settings-panel hidden-colorswatch .title {
+	position: absolute;
+	top: 10px;
+	text-transform: uppercase;
+}
+.settings-panel hidden .settings-panel hidden-btn {
+	display: block;
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 46px;
+	height: 46px;
+	padding: 0;
+	transition: .3s;
+	cursor: pointer;
+}
+.settings-panel hidden .settings-panel hidden-btn svg,
+.settings-panel hidden-buy-now .settings-panel hidden-btn svg {
+	width: 26px;
+	height: 27px;
+	position: relative;
+	top: 7px;
+	left: 0px;
+	fill: #fff;
+}
+.settings-panel hidden-buy-now .settings-panel hidden-btn svg {
+	position: relative;
+	left: 4px;
+	margin: 0 10px 0 0;
+}
+.settings-panel hidden-buy-now .settings-panel hidden-btn img {
+	position: relative;
+	margin: 0 10px 0 0;
+}
+.settings-panel hidden .settings-panel hidden-inside {
+	position: absolute;
+	top: 0;
+	left: -140px;
+	width: 140px;
+	background-color: rgba(255,255,255,.75);
+	padding: 35px 18px 8px;
+	transition: .3s;
+}
+.settings-panel hidden-layout .settings-panel hidden-inside {
+	left: -475px;
+	width: 469px;
+	padding: 0 3px 3px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.settings-panel hidden-layout a {
+	display: block;
+	position: relative;
+	margin-top: 3px;
+  max-width: 33.333%;
+  width: 33.333%;
+}
+.settings-panel hidden-layout img {
+	width: 100%;
+}
+.settings-panel hidden-layout .settings-panel hidden-inside a.active img {
+	-webkit-filter: brightness(65%);
+}
+.settings-panel hidden-layout .settings-panel hidden-inside a.active:after {
+	content: '\e926';
+	font-family: 'Bonex';
+	font-size: 34px;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.settings-panel hidden .opened .settings-panel hidden-inside {
+	left: 0;
+}
+.settings-panel hidden .opened .settings-panel hidden-btn {
+	left: 140px;
+}
+.settings-panel hidden .settings-panel hidden-layout.opened .settings-panel hidden-btn {
+	left: 468px;
+}
+.settings-panel hidden-colorswatch .settings-panel hidden-inside a {
+	position: relative;
+	width: 34px;
+	height: 33px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	float: left;
+	transition: .2s;
+	text-decoration: none !important;
+}
+.settings-panel hidden-colorswatch .settings-panel hidden-inside a.active {
+	box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+	z-index: 1;
+}
+.settings-panel hidden-colorswatch .settings-panel hidden-inside a.active:after {
+	content: '\e926';
+	font-family: 'Bonex';
+	font-size: 14px;
+	color: #fff;
+	position: relative;
+	top: 2px;
+	left: 1px;
+}
+.settings-panel hidden-colorswatch .settings-panel hidden-inside a:hover {
+	opacity: .7;
+}
+.settings-panel hidden-colorswatch .settings-panel hidden-inside a:nth-child(1) {
+	background: #1e76bd;
+}
+.settings-panel hidden-colorswatch .settings-panel hidden-inside a:nth-child(2) {
+	background: #c17a4b;
+}
+.settings-panel hidden-colorswatch .settings-panel hidden-inside a:nth-child(3) {
+	background: #dc5512;
+}
+.settings-panel hidden-colorswatch .settings-panel hidden-inside a:nth-child(4) {
+	background: #00aaa6;
+}
+.settings-panel hidden-colorswatch .settings-panel hidden-inside a:nth-child(5) {
+	background: #89b222;
+}
+.settings-panel hidden-colorswatch .settings-panel hidden-inside a:nth-child(6) {
+	background: #e48a00;
+}
+@media (max-width: 767px) {
+	.settings-panel hidden .settings-panel hidden-buy-now{
+		display: none;
+	}
+}
+
+@media (max-width: 565px) {
+	.settings-panel hidden .settings-panel hidden-layout.opened .settings-panel hidden-btn {
+		left: calc(100vw - 50px);
+	}
+	.settings-panel hidden-layout .settings-panel hidden-inside {
+		width: calc(100vw - 50px); left: calc(-100vw + 50px);
+	}
+}

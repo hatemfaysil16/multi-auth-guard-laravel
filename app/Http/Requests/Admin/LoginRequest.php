@@ -2,6 +2,7 @@
 namespace App\Http\Requests\Admin;
 
 
+use App\Rules\Admin\LoginRole;
 use Illuminate\Auth\Events\Lockout;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
@@ -29,7 +30,7 @@ class LoginRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => ['required', 'string', 'email'],
+            'email' => [new LoginRole(),'required', 'string', 'email'],
             'password' => ['required', 'string'],
         ];
     }

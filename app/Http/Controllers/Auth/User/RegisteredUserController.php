@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth\User;
 
+use App\helpers\TanslationHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\RegisterRequest;
 use App\Models\User;
@@ -39,6 +40,6 @@ class RegisteredUserController extends Controller
         ]);
         event(new Registered($user));
         Auth::login($user);
-        return redirect(RouteServiceProvider::HOME);
+        return redirect(RouteServiceProvider::HOME)->with('add',TanslationHelper::translate('Register Successfully'));
     }
 }

@@ -1,0 +1,6 @@
+@section('page_title',!empty($modelId) ? TanslationHelper::translate('Edit'.$name) : TanslationHelper::translate('Create'.$name))
+@section('page_left',!empty($modelId) ? TanslationHelper::translate('Edit'.$name) : TanslationHelper::translate('Create'.$name))
+@section('page_center',TanslationHelper::translate($name))
+@section('page_center_link',$route)
+@section('page_right',!empty($modelId) ? TanslationHelper::translate('Edit'.$name):TanslationHelper::translate('Create'.$name))
+@section('page_right_link',$route)

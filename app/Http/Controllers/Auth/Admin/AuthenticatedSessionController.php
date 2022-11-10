@@ -3,6 +3,7 @@ namespace App\Http\Controllers\Auth\Admin;
 
 
 use  App\Http\Requests\Admin\LoginRequest;
+use App\helpers\TanslationHelper;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
@@ -30,7 +31,7 @@ class AuthenticatedSessionController extends Controller
     {
         $request->authenticateAdmin();
         $request->session()->regenerate();
-        return redirect()->intended(RouteServiceProvider::ADMIN);
+        return redirect()->intended(RouteServiceProvider::ADMIN)->with('add',TanslationHelper::translate('login Successfully'));
     }
 
     /**
@@ -44,6 +45,6 @@ class AuthenticatedSessionController extends Controller
         Auth::guard('admin')->logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('login.admin');
+        return redirect()->route('login.admin')->with('delete',TanslationHelper::translate('logout Successfully'));
     }
 }
